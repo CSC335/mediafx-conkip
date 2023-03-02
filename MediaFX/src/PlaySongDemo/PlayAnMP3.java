@@ -8,7 +8,6 @@ package PlaySongDemo;
 import java.io.File;
 import java.net.URI;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -28,9 +27,11 @@ public class PlayAnMP3 extends Application {
   @Override
   public void start(Stage stage) throws Exception {
     BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
-    pane.setCenter( new Label(path));
+    //I, Connor Kippes, changed the song before pushing to GitHub
+    String path = "songfiles/SwingCheese.mp3";
     playASong(path);
+    //And swapped two songs
+    pane.setCenter( new Label(path));
     // Put the pane in a sized Scene and show the GUI
     Scene scene = new Scene(pane, 255, 85); // 255 pixels wide, 85 pixels tall
     stage.setScene(scene);
